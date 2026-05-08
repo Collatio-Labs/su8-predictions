@@ -1,0 +1,16 @@
+# Lean build outputs
+.lake/
+build/
+*.olean
+*.ilean
+*.hash
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# OS
+.DS_Store
+Thumbs.db

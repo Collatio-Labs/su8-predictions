@@ -1,0 +1,203 @@
+{
+  "session": "C136",
+  "title": "Fermion Sector Essence \u2014 PMNS, J, m_nu_1/2, ordering",
+  "inputs_derived": {
+    "r_cascade": "9/8 (THEOREM, C122/C128)",
+    "xi_cascade": "15/49 (THEOREM, C122)",
+    "M_PS_GeV": 50118723362727.23,
+    "M_LR_GeV": 2187761623949552.5,
+    "eps_FN": 0.02290867652767773,
+    "theta_C_deg": 12.920966381583565,
+    "delta_CKM_deg": 81.39325910428596,
+    "Q_L": [
+      2,
+      1,
+      0
+    ],
+    "Q_R_nu": [
+      1,
+      0,
+      0
+    ]
+  },
+  "PMNS_predictions": {
+    "theta12_deg": 36.66626623442133,
+    "theta23_deg": 44.041351917966864,
+    "theta13_deg": 9.097436169383387,
+    "delta_PMNS_deg": 98.60674089571404,
+    "J_pmns": 0.03648479680985712
+  },
+  "PMNS_observed": {
+    "theta12_deg": 33.41,
+    "theta23_deg": 49.1,
+    "theta13_deg": 8.54,
+    "delta_cp_deg": 230.0,
+    "dm2_21": 7.53e-05,
+    "dm2_31": 0.002453,
+    "J_pmns": 0.0331,
+    "V_us": 0.2252,
+    "delta_CKM_deg": 68.75
+  },
+  "neutrino_masses_eV": {
+    "m_nu_1": 0.0019441144831159201,
+    "m_nu_2": 0.012110039910483223,
+    "m_nu_3": 0.07543437791711165,
+    "sum": 0.08948853231071079
+  },
+  "delta_m_squared_eV2": {
+    "Dm2_21": 0.00014287348551003543,
+    "Dm2_31": 0.0056865657906181605,
+    "ratio_Dm2_31_21": 39.801407310236975
+  },
+  "ordering": "NORMAL",
+  "summary": {
+    "theta12_residual_deg": 3.2562662344213322,
+    "theta23_residual_deg": -5.058648082033137,
+    "theta13_residual_deg": 0.5574361693833882,
+    "J_residual": 0.0033847968098571213,
+    "m_nu_3_residual_eV": 0.025906607928952483
+  },
+  "closed_form_audit": {
+    "items": [
+      {
+        "observable": "sin^2 theta_12 (TBM seed)",
+        "closed_form": "1/3 (D_4 Weyl orbit, exact \u211a)",
+        "exact_value": "1/3",
+        "predicted": 0.3333333333333333
+      },
+      {
+        "observable": "sin^2 theta_23 (TBM seed)",
+        "closed_form": "1/2 (D_4 Weyl orbit, exact \u211a)",
+        "exact_value": "1/2",
+        "predicted": 0.5
+      },
+      {
+        "observable": "sin^2 theta_13 (TBM seed)",
+        "closed_form": "0 (D_4 Weyl orbit, exact \u211a)",
+        "exact_value": "0",
+        "predicted": 0.0
+      },
+      {
+        "observable": "theta_12 (TM1 sum rule, deg)",
+        "closed_form": "arctan(1/sqrt 2) - s_C/sqrt 2 * cot(theta_23) * cos(delta)",
+        "predicted": 36.66626623442133,
+        "observed": 33.41,
+        "residual": 3.2562662344213322
+      },
+      {
+        "observable": "theta_23 (TM1 sum rule, deg)",
+        "closed_form": "pi/4 + (s_C/2) * cos(delta_PMNS)",
+        "predicted": 44.041351917966864,
+        "observed": 49.1,
+        "residual": -5.058648082033137
+      },
+      {
+        "observable": "theta_13 (TM1 sum rule, deg)",
+        "closed_form": "arcsin(sin(theta_C) / sqrt 2)",
+        "predicted": 9.097436169383387,
+        "observed": 8.54,
+        "residual": 0.5574361693833882
+      },
+      {
+        "observable": "delta_PMNS (deg)",
+        "closed_form": "pi - delta_CKM (PS quark-lepton phase mapping)",
+        "predicted": 98.60674089571404,
+        "observed": 230.0
+      },
+      {
+        "observable": "Jarlskog J_PMNS",
+        "closed_form": "c12 c23 c13^2 s12 s23 s13 sin(delta) [from cascade angles]",
+        "predicted": 0.03648479680985712,
+        "observed": 0.0331,
+        "residual": 0.0033847968098571213
+      },
+      {
+        "observable": "m_nu_3 (eV) [cascade essence]",
+        "closed_form": "(150/2401) * v_EW^2 / M_PS  ;  150/2401 = (xi^2/lambda_R) * (1/8) EXACT",
+        "exact_dimensionless_coeff": "150/2401",
+        "predicted": 0.07543437791711165,
+        "observed": 0.049527769988159165,
+        "residual": 0.025906607928952483
+      },
+      {
+        "observable": "m_nu_2 (eV) [cascade essence]",
+        "closed_form": "m_nu_3 * sqrt(eps_FN * 9/8)  ;  9/8 = r THEOREM",
+        "predicted": 0.012110039910483223,
+        "observed": 0.008677557259966655,
+        "residual": 0.0034324826505165683
+      },
+      {
+        "observable": "m_nu_1 (eV) [cascade essence]",
+        "closed_form": "m_nu_3 * (eps_FN * 9/8)  ;  9/8 = r THEOREM",
+        "predicted": 0.0019441144831159201,
+        "observed": null,
+        "residual": null
+      },
+      {
+        "observable": "Sum m_nu (eV)",
+        "closed_form": "m_nu_1 + m_nu_2 + m_nu_3",
+        "predicted": 0.08948853231071079,
+        "planck_upper_bound": 0.12,
+        "below_planck": true
+      },
+      {
+        "observable": "ordering",
+        "closed_form": "FN charges Q^L = (2,1,0) strict descent + 0 < eps < 1",
+        "predicted": "NORMAL",
+        "observed": "NORMAL (NuFIT 5.2 best-fit, no inverted-ordering preference)",
+        "theorem": "PMNSDerivation.lean :: nu_mass_strict_normal"
+      }
+    ],
+    "no_fits": true,
+    "method": "Commandments II + V + XII \u2014 every prediction is a closed-form expression in cascade rationals; NO fits, NO estimates, NO error margins.  Residuals are reported AS-IS.",
+    "precision": "mpmath @ 50 dps; rational core in Fraction; rounding error < 1e-45"
+  },
+  "atmospheric_coefficient_exact": {
+    "value": "150/2401",
+    "decimal": 0.06247396917950854,
+    "lean_witness": "atmosphericCoeff in PMNSDerivation.lean"
+  },
+  "twoloop_pmns": {
+    "sum_rule": {
+      "theta12_deg": 36.66626623442133,
+      "theta23_deg": 44.041351917966864,
+      "theta13_deg": 9.097436169383387
+    },
+    "exact_matrix": {
+      "theta12_deg": 34.424037693782275,
+      "theta23_deg": 44.265358209323104,
+      "theta13_deg": 9.097436169383387
+    },
+    "final_corrected": {
+      "theta12_deg": 34.42403163164875,
+      "theta23_deg": 44.26534427843046,
+      "theta13_deg": 9.097442174849478,
+      "delta_PMNS_deg": 98.60674089571404
+    },
+    "NuFIT_residual_pct": {
+      "theta12": 3.0351141324416515,
+      "theta23": 9.846549331098858,
+      "theta13": 6.527425935005608
+    },
+    "improvement_from_exact": {
+      "theta12_pct_before": 9.7463820246074,
+      "theta12_pct_after": 3.0351141324416515,
+      "theta23_pct_before": 10.302745584588873,
+      "theta23_pct_after": 9.846549331098858,
+      "theta13_pct_before": 6.527355613388622,
+      "theta13_pct_after": 6.527425935005608
+    },
+    "sm_running_shifts_deg": {
+      "d_theta12": -5.841491882325972e-06,
+      "d_theta23": -1.278858423611385e-05,
+      "d_theta13": -9.476151146747322e-07
+    },
+    "quark_2loop_shift_deg": 9.961685098430027e-06,
+    "structural_finding": "theta_23 predicted BELOW maximal (< 45 deg) while NuFIT best fit is 49.1 deg.  This is a STRUCTURAL prediction of U_PMNS = U_e^dag x U_TBM with pure (1,2) charged-lepton rotation.  Improving theta_23 requires a (2,3) component in U_e \u2014 CLM-036 scope.",
+    "target_met": {
+      "theta12_within_5pct": true,
+      "theta23_within_5pct": false,
+      "theta13_within_5pct": false
+    }
+  }
+}
